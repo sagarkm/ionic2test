@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 import { GoogleMaps } from '../../providers/google-maps';
 import { GoogleMapsCluster } from '../../providers/google-maps-cluster';
+import { ListWithStorePage } from '../list-with-store/list-with-store';
 
 @Component({
   selector: 'page-map-with-store',
@@ -11,7 +12,7 @@ export class MapWithStorePage {
   @ViewChild('map') mapElement: ElementRef;
   @ViewChild('pleaseConnect') pleaseConnect: ElementRef;
 
-  constructor(public platform: Platform, public maps: GoogleMaps, public mapCluster: GoogleMapsCluster) {
+  constructor(public navCtrl: NavController, public platform: Platform, public maps: GoogleMaps, public mapCluster: GoogleMapsCluster) {
 
   }
 
@@ -25,5 +26,9 @@ export class MapWithStorePage {
 
     });
 
+  }
+
+  tolistwithStores(){
+    this.navCtrl.push(ListWithStorePage);
   }
 }
