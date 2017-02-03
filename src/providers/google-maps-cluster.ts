@@ -1584,7 +1584,7 @@ export class GoogleMapsCluster {
             let markers = this.locations.map((item) => {
                 return new google.maps.Marker({
                     position: {lat: item.Latitude, lng: item.Longitude},
-                    label: "Hello!"
+                    label: item.PSCName
                 });
             });
  

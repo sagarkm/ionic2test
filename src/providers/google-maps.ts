@@ -88,8 +88,7 @@ export class GoogleMaps {
       Geolocation.getCurrentPosition().then((position) => {
  
         //let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        let latLng = new google.maps.LatLng(-31.563910, 147.154312);
- 
+        let latLng = new google.maps.LatLng(40.732, -75.5332);
         let mapOptions = {
           center: latLng,
           zoom: 2,
